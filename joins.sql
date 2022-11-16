@@ -41,3 +41,10 @@ join game on
 select eteam.teamname,count(*) from goal 
 join eteam on goal.teamid=eteam.id
 group by eteam.teamname;
+
+
+
+
+-- Show the stadium and the number of goals scored in each stadium.
+select game.stadium,count(*) from game join goal on
+goal.matchid=game.id group by stadium;
